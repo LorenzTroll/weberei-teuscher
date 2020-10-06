@@ -1,0 +1,31 @@
+{
+  "name": "weberei-teuscher",
+  "version": "1.0.0",
+  "description": "npm for weberei-teuscher website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "jekyll serve",
+    "predeploy": "JEKYLL_ENV=production jekyll build",
+    "deploy": "gh-pages -d _site",
+    "copy-vendor": "bash copy_vendor.sh",
+    "dev": "npm run copy-vendor && jekyll serve",
+    "predeploy": "npm run copy-vendor && JEKYLL_ENV=production jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LorenzTroll/weberei-teuscher.git"
+  },
+  "author": "Lorenz Troll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LorenzTroll/weberei-teuscher/issues"
+  },
+  "homepage": "https://github.com/LorenzTroll/weberei-teuscher#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "gh-pages": "^3.1.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
